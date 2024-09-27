@@ -1,6 +1,6 @@
 import Candidato from "./elementos/Candidato";
-export default function GridCandidatos(props) {
 
+export default function GridCandidatos(props) {
     if (props?.listaCandidatos) {
         return (
             <div style={{
@@ -13,7 +13,13 @@ export default function GridCandidatos(props) {
                 gap: '20px'
             }}>
                 {props.listaCandidatos.map((candidato) => (
-                    <Candidato key={candidato.id} candidato={candidato} />
+                    <Candidato
+                        setListaCandidatos={props.setListaCandidatos}
+                        setCandidatoSelecionado={props.setCandidatoSelecionado}
+                        listaCandidatos={props.listaCandidatos}
+                        setDetalharCandidato={props.setDetalharCandidato}
+                        key={candidato.id}
+                        candidato={candidato} />
                 ))}
             </div>
         )
