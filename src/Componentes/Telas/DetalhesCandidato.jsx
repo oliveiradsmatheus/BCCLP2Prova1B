@@ -28,11 +28,11 @@ export default function DetalhesCandidato(props) {
     }
 
     function registrarQuestionamento(questionamento) {
-        const listaAntiga = props.candidatoSelecionado.questionamentos;
+        /*const listaAntiga = props.candidatoSelecionado.questionamentos;
         setListaQuestionamentos([...listaAntiga, questionamento]);
         props.setListaCandidatos(props.listaCandidatos.map((item) => {
             return item.id === props.candidatoSelecionado.id ? item : listaQuestionamento;
-        }))
+        }))*/
     }
 
     return (
